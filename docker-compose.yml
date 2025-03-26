@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web_service:
+    build: .
+    container_name: albbacompany_web
+    networks:
+      - albbacompany_network
+    ports:
+      - "8080:5000"
+
+networks:
+  albbacompany_network:
+    external: true
